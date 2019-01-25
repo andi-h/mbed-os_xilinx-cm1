@@ -1,0 +1,5 @@
+/objects
+*.hex
+link_feedback
+*.scvd
+*.uvguix.*
