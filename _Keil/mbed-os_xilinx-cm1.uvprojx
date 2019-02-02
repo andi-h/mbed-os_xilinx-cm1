@@ -336,7 +336,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--gnu --preinclude=../mbed_config.h --feedback=link_feedback</MiscControls>
-              <Define>CORTEX_M1 ARTY_CM1 __ASSERT_MSG DEVICE_PORTOUT=1 TARGET_CORTEX_M DEVICE_USTICKER=1 TOOLCHAIN_ARM TOOLCHAIN_ARM_STD TARGET_CORTEX __MBED__=1 DEVICE_PORTIN=1 TARGET_M1 __CMSIS_RTOS __MBED_CMSIS_RTOS_CM MBED_FAULT_HANDLER_DISABLED</Define>
+              <Define>CORTEX_M1 ARTY_CM1 __ASSERT_MSG DEVICE_PORTOUT=1 TARGET_CORTEX_M DEVICE_USTICKER=1 TOOLCHAIN_ARM TOOLCHAIN_ARM_STD TARGET_CORTEX __MBED__=1 DEVICE_PORTIN=1 TARGET_M1 __CMSIS_RTOS __MBED_CMSIS_RTOS_CM MBED_FAULT_HANDLER_DISABLED NDEBUG DEVICE_SERIAL=1 DEVICE_STDIO_MESSAGES=1</Define>
               <Undefine></Undefine>
               <IncludePath>..\mbed-os\targets\TARGET_Xilinx;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device;..\mbed-os\drivers;..\mbed-os;..\mbed-os\cmsis\TARGET_CORTEX_M;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\include;..\mbed-os\platform;..\mbed-os\rtos\TARGET_CORTEX;..\mbed-os\rtos\TARGET_CORTEX\rtx5\RTX\Include;..\mbed-os\rtos\TARGET_CORTEX\rtx5\Include;..\;..\mbed-os\rtos;../mbed-os/rtos/TARGET_CORTEX/rtx4;../mbed-os/rtos/TARGET_CORTEX/rtx5;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Config;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source;..\mbed-os\hal;..\mbed-os\cmsis</IncludePath>
             </VariousControls>
@@ -611,6 +611,81 @@
               <FileName>us_ticker.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\mbed-os\targets\TARGET_Xilinx\us_ticker.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_g.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_intr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_intr.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_l.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_l.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_selftest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_selftest.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_sinit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_sinit.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_stats.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_stats.c</FilePath>
+            </File>
+            <File>
+              <FileName>serial_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\serial_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Serial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SerialBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\SerialBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CThunkBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\platform\CThunkBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Ticker.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Ticker.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>TimerEvent.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\TimerEvent.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Timer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Timeout.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Timeout.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -913,7 +988,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -1050,7 +1125,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x40000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -1075,7 +1150,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x4000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -1111,7 +1186,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls>--gnu --preinclude=mbed_config.h --feedback=link_feedback</MiscControls>
-              <Define>CORTEX_M1 ARTY_CM1 __ASSERT_MSG DEVICE_PORTOUT=1 TARGET_CORTEX_M DEVICE_USTICKER=1 TOOLCHAIN_ARM TOOLCHAIN_ARM_STD TARGET_CORTEX __MBED__=1 DEVICE_PORTIN=1 TARGET_M1 __CMSIS_RTOS __MBED_CMSIS_RTOS_CM MBED_FAULT_HANDLER_DISABLED</Define>
+              <Define>SIM_BUILD CORTEX_M1 ARTY_CM1 __ASSERT_MSG DEVICE_PORTOUT=1 TARGET_CORTEX_M TOOLCHAIN_ARM TOOLCHAIN_ARM_STD TARGET_CORTEX __MBED__=1 DEVICE_PORTIN=1 TARGET_M1 __CMSIS_RTOS __MBED_CMSIS_RTOS_CM MBED_FAULT_HANDLER_DISABLED DEVICE_SERIAL NDEBUG DEVICE_SERIAL=1 DEVICE_STDIO_MESSAGES=1</Define>
               <Undefine></Undefine>
               <IncludePath>..\mbed-os\targets\TARGET_Xilinx;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device;..\mbed-os\drivers;..\mbed-os;..\mbed-os\cmsis\TARGET_CORTEX_M;..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\include;..\mbed-os\platform;..\mbed-os\rtos\TARGET_CORTEX;..\mbed-os\rtos\TARGET_CORTEX\rtx5\RTX\Include;..\mbed-os\rtos\TARGET_CORTEX\rtx5\Include;..\;..\mbed-os\rtos;../mbed-os/rtos/TARGET_CORTEX/rtx4;../mbed-os/rtos/TARGET_CORTEX/rtx5;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Config;../mbed-os/rtos/TARGET_CORTEX/rtx5/RTX/Source;..\mbed-os\hal;..\mbed-os\cmsis</IncludePath>
             </VariousControls>
@@ -1386,6 +1461,81 @@
               <FileName>us_ticker.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\mbed-os\targets\TARGET_Xilinx\us_ticker.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_g.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_g.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_intr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_intr.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_l.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_l.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_selftest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_selftest.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_sinit.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_sinit.c</FilePath>
+            </File>
+            <File>
+              <FileName>xuartlite_stats.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\TARGET_XC7Z020\device\standalone_bsp\Cortex_M1_0\libsrc\uartlite_v3_2\src\xuartlite_stats.c</FilePath>
+            </File>
+            <File>
+              <FileName>serial_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\mbed-os\targets\TARGET_Xilinx\serial_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Serial.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>SerialBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\SerialBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>CThunkBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\platform\CThunkBase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Ticker.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Ticker.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>TimerEvent.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\TimerEvent.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Timer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Timeout.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\mbed-os\drivers\Timeout.cpp</FilePath>
             </File>
           </Files>
         </Group>

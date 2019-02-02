@@ -31,4 +31,4 @@
 call fromelf --vhx --32x1 --output bram_a7.hex objects\xilinx-cm1.axf
 
 @REM - Copy the files to the relevant directories of the hardware project
-copy bram_a7.* C:\Users\Andreas\Desktop\m1_for_arty_a7\m1_for_arty_a7.srcs\sources_1\imports\m1_for_arty_a7\m1_for_arty_a7
+copy bram_a7.* D:\Projects\zedboard_cortex_m1\m1_for_arty_a7.srcs\sources_1\imports\m1_for_arty_a7\m1_for_arty_a7

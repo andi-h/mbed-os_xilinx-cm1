@@ -24,11 +24,13 @@
 
 uint8_t LED_val = 0; // Value will be toggled for making the LED's Blink
 DigitalOut led0(LED0, 1);
+Serial uart(STDIO_UART_TX, STDIO_UART_RX);
 Thread thread;
 
 void led0_thread() {
     while (true) {
       led0 = !led0;
+			printf("Hello World!\n");
 			wait(1);
     }
 }
@@ -37,7 +39,7 @@ int main (void)
 {
 	thread.start(led0_thread);
     
-  while ( 1 )
+  while(1)
   {
 
   }
