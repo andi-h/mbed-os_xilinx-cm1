@@ -21,22 +21,45 @@
 #include "mbed.h"
 
 /*******************************************************************/
+void uart_tx_handler();
+void uart_rx_handler();
 
 uint8_t LED_val = 0; // Value will be toggled for making the LED's Blink
 DigitalOut led0(LED0, 1);
+DigitalOut led1(LED1, 1);
+DigitalOut led2(LED2, 1);
+DigitalOut led3(LED3, 1);
 Serial uart(STDIO_UART_TX, STDIO_UART_RX);
 Thread thread;
+Ticker taskclass_ticker;
 
 void led0_thread() {
     while (true) {
-      led0 = !led0;
-			printf("Hello World!\n");
+			//printf("Hello World!\n");
+			if(uart.readable())
+			{
+				if(uart.getc() == 0xAA) 
+					{ 
+						led0 = !led0;
+					}
+			}
+			uart.putc(0xAA);
 			wait(1);
     }
 }
 
+void taskclass()
+{
+	led3 = !led3; 
+}
+
 int main (void)
 {
+	uart.attach(&uart_tx_handler, Serial::TxIrq);
+	uart.attach(&uart_rx_handler, Serial::RxIrq);
+	
+	taskclass_ticker.attach(&taskclass, 1.0);
+	
 	thread.start(led0_thread);
     
   while(1)
@@ -44,3 +67,23 @@ int main (void)
 
   }
 }
+
+void uart_tx_handler(void)
+{
+	led1 = !led1;
+}
+
+void uart_rx_handler(void)
+{
+	
+}
+
+
+extern "C" {
+	void UART0_Handler ( void )
+	{
+			led2 = !led2;
+			NVIC_ClearPendingIRQ(UART0_IRQn);
+	}
+}
+
